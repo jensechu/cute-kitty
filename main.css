@@ -1,0 +1,44 @@
+body {
+    margin-left: 200px;
+}
+
+#main {
+}
+
+#blurb {
+    height: 200px;
+    width: 300px;
+    float: left;
+}
+
+#picture {
+    float: left;
+    height: 200px;
+    width: 200px;
+}
+
+#controls {
+    width: 200px;
+}
+
+#mrow {
+    font-family: helvetica;
+    font-size: 25pt;
+    
+}
+
+h1 {
+    color: #33CCFF;
+    font-family: sans-serif;
+    font-size: 25pt;
+    }
+
+h2 {
+    color: #33CCFF;
+    font-family: sans-serif;
+    font-size: 20pt;
+    }
+
+div {
+    border: 0px solid black;
+}
