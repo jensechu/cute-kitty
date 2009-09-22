@@ -17,17 +17,6 @@ $(document).ready(function(){
 	}
     });
 
-    function reset_kitty() {
-	$("#picture img").attr({ src: "images/kitty.png" });
-	$('.fish').css({top: fishTop,
-			left: fishLeft});
-	$('.fish').fadeIn("slow");
-    }
-
-    function kitty_confused() {
-	$("#picture img").attr({ src: "images/kitty_nom.png" });
-    }
-
     $(".fish").draggable({
 	drag: function() { 
 	    $("#picture img").attr({ src: "images/kitty_hungry.png" });
@@ -35,7 +24,6 @@ $(document).ready(function(){
 	},
 	stop: function () {
 	    if($("#picture img").hasClass("eating")) { 
-		console.log("I'm EATING!");
 		setTimeout(reset_kitty, 3000);
 	    }
 	    else {
@@ -45,11 +33,16 @@ $(document).ready(function(){
 	
     });
      
-
-    var meow = ["meow", "mrrrrrrrrrow", "mew", "*purrrr*"];
+    function reset_kitty() {
+	$("#picture img").attr({ src: "images/kitty.png" });
+	$('.fish').css({top: fishTop,
+			left: fishLeft});
+	$('.fish').fadeIn("slow");
+    }
 
     $("form").submit(function () {
 	var english = $("#rawr").val()
+	
 	if(english == ""){
 	    $("h1 em").append(" mrow? ");
 	    $("#picture img").attr({ src: "images/kitty_nom.png" });
