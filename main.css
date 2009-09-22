@@ -19,7 +19,8 @@ body {
 }
 
 #foods {
-    width: 200px;
+    position: absolute;
+    width: 300px;
     float: left;
     margin-top: 100px;
 }
@@ -47,5 +48,10 @@ h2 {
     }
 
 div {
-    border: 0px solid black;
+    border: 1px solid black;
+}
+
+#foods img {
+    float: left;
+    border: 0px solid;
 }

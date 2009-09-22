@@ -1,5 +1,6 @@
 $(document).ready(function(){
-
+    var fishLeft = $('.fish').css('left');
+    var fishTop = $('.fish').css('top');
     var furs = ["#F7941D", "#EBEBEB", "#636363", "#C69C6D", "#A186BE", "395A00", "#FFF220"];
 
     $("#picture img").click(function () {
@@ -8,16 +9,20 @@ $(document).ready(function(){
 
     });
 
-
-    $("#picture img").draggable();
-
     $("#picture img").droppable({
 	drop: function() { 
 	    $(this).attr({ src: "images/kitty_nom.png" });
-	    $(".fish").css({ "display" : "none" });
-	    $(".fish").reset();
+	    $(".fish").hide();
+	    $(this).addClass("eating");
 	}
     });
+
+    function reset_kitty() {
+	$("#picture img").attr({ src: "images/kitty.png" });
+	$('.fish').css({top: fishTop,
+			left: fishLeft});
+	$('.fish').fadeIn("slow");
+    }
 
     $(".fish").draggable({
 	drag: function() { 
@@ -25,13 +30,19 @@ $(document).ready(function(){
 	    revert: true
 	},
 	stop: function () {
-	    $("#picture img").attr({ src: "images/kitty.png" });
+	    if($("#picture img").hasClass("eating")) { 
+		console.log("I'm EATING!");
+		setTimeout(reset_kitty, 3000);
+	    }
+	    else {
+		reset_kitty();
+	    }
 	}
 	
     });
      
 
-    var meow = ["meow", "mrrrrrrrrrow", "mew"];
+    var meow = ["meow", "mrrrrrrrrrow", "mew", "*purrrr*"];
 
     $("#mrow").click(function () {
 	var mew = Math.floor(Math.random()*meow.length);
