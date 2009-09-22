@@ -24,6 +24,10 @@ $(document).ready(function(){
 	$('.fish').fadeIn("slow");
     }
 
+    function kitty_confused() {
+	$("#picture img").attr({ src: "images/kitty_nom.png" });
+    }
+
     $(".fish").draggable({
 	drag: function() { 
 	    $("#picture img").attr({ src: "images/kitty_hungry.png" });
@@ -44,14 +48,22 @@ $(document).ready(function(){
 
     var meow = ["meow", "mrrrrrrrrrow", "mew", "*purrrr*"];
 
-    $("#mrow").click(function () {
-	var mew = Math.floor(Math.random()*meow.length);
-	$("h1 em").html(" " +  meow[mew] + " "); 
+    $("form").submit(function () {
+	var english = $("#rawr").val()
+	if(english == ""){
+	    $("h1 em").append(" mrow? ");
+	    setTimeout(kitty_confused, 5000);
+	    return false;
+	}
+	
+	else{
+	
+	$("h1 em").append(" " + english + " "); 
 	return false;
+	}
 
     });
 
-	
 
     
     
