@@ -52,14 +52,16 @@ $(document).ready(function(){
 	var english = $("#rawr").val()
 	if(english == ""){
 	    $("h1 em").append(" mrow? ");
-	    setTimeout(kitty_confused, 5000);
+	    $("#picture img").attr({ src: "images/kitty_nom.png" });
+	    setTimeout(reset_kitty, 1000);
 	    return false;
 	}
 	
-	else{
-	
-	$("h1 em").append(" " + english + " "); 
-	return false;
+	else{	
+	    $("h1 em").append(" " + english + " ");
+	    $("#picture img").attr({ src: "images/kitty_meow.png" });
+	    setTimeout(reset_kitty, 1000);
+	    return false;
 	}
 
     });
