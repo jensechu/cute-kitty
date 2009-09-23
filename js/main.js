@@ -44,14 +44,14 @@ $(document).ready(function(){
 	var english = $("#rawr").val()
 	
 	if(english == ""){
-	    $("h1 em").append(" mrow? ");
+	    $("h1 em").html(" mrow? ");
 	    $("#picture img").attr({ src: "images/kitty_nom.png" });
 	    setTimeout(reset_kitty, 1000);
 	    return false;
 	}
 	
 	else{	
-	    $("h1 em").append(" " + english + " ");
+	    $("h1 em").html(" " + english + " ");
 	    $("#picture img").attr({ src: "images/kitty_meow.png" });
 	    setTimeout(reset_kitty, 1000);
 	    return false;
