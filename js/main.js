@@ -24,7 +24,7 @@ $(document).ready(function(){
 	},
 	stop: function () {
 	    if($("#picture img").hasClass("eating")) { 
-		setTimeout(reset_kitty, 3000);
+		setTimeout(reset_kitty, 2000);
 	    }
 	    else {
 		reset_kitty();
@@ -41,21 +41,34 @@ $(document).ready(function(){
     }
 
     $("form").submit(function () {
-	var english = $("#rawr").val()
+	var english = $("#rawr").val();
+	var count = english.length;
 	
 	if(english == ""){
-	    $("h1 em").append(" mrow? ");
+	    $("h1").html(" mrow? ");
 	    $("#picture img").attr({ src: "images/kitty_nom.png" });
 	    setTimeout(reset_kitty, 1000);
-	    return false;
 	}
-	
-	else{	
-	    $("h1 em").append(" " + english + " ");
+	else {	
+	    $("h1").html(" " + english + " ");
 	    $("#picture img").attr({ src: "images/kitty_meow.png" });
 	    setTimeout(reset_kitty, 1000);
-	    return false;
 	}
+
+	if(count <= 3){
+	    $("h3").html(" mew ");
+	}
+	
+	if(count == 5){	
+	    $("h3").html(" Meoww ");
+	}
+
+	if(count >= 6){	
+	    $("h3").html(" rawr ");
+	}
+	
+
+	return false;
 
     });
 
