@@ -1,7 +1,7 @@
 $(document).ready(function(){
     var fishLeft = $('.fish').css('left');
     var fishTop = $('.fish').css('top');
-    var furs = ["#F7941D", "#EBEBEB", "#636363", "#C69C6D", "#A186BE", "395A00", "#FFF220"];
+    var furs = ["#FFFFFF", "#F7941D", "#EBEBEB", "#636363", "#C69C6D", "#A186BE", "395A00", "#FFF220"];
 
     $("#picture img").click(function () {
 	var choice = Math.floor(Math.random()*furs.length);
@@ -32,6 +32,12 @@ $(document).ready(function(){
 	}
 	
     });
+
+
+    function reset_meow() {
+	$("h3").html("&nbsp");
+	$("h1").html("&nbsp");
+    }
      
     function reset_kitty() {
 	$("#picture img").attr({ src: "images/kitty.png" });
@@ -46,25 +52,29 @@ $(document).ready(function(){
 	
 	if(english == ""){
 	    $("h1").html(" mrow? ");
-	    $("#picture img").attr({ src: "images/kitty_nom.png" });
+	    $("#picture img").attr({ src: "images/kitty_confused.png" });
 	    setTimeout(reset_kitty, 1000);
+	    setTimeout(reset_meow, 1000)
 	}
-	else {	
-	    $("h1").html(" " + english + " ");
+ 	else {	
+	    $("h3").html(" " + english + " ");
 	    $("#picture img").attr({ src: "images/kitty_meow.png" });
 	    setTimeout(reset_kitty, 1000);
 	}
 
 	if(count <= 3){
-	    $("h3").html(" mew ");
+	    $("h1").html(" mew ");
+	    setTimeout(reset_meow, 2000)
 	}
 	
 	if(count == 5){	
-	    $("h3").html(" Meoww ");
+	    $("h1").html(" Meoww ");
+	    setTimeout(reset_meow, 2000)
 	}
 
 	if(count >= 6){	
-	    $("h3").html(" rawr ");
+	    $("h1").html(" rawr ");
+	    setTimeout(reset_meow, 2000)
 	}
 	
 

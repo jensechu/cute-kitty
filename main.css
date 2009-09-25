@@ -4,13 +4,12 @@ body {
 }
 
 #main {
-    width: 100px;
-    height: 100px;
+    width: 100%;
 }
 
 #blurb {
     height: 200px;
-    width: 300px;
+    width: 200px;
     float: left;
     border-width: 20px;
     border-image: url('images/border3.png') 0 0 round;
@@ -22,10 +21,12 @@ body {
     float: left;
     height: 200px;
     width: 200px;
+    margin-left: 100px
 }
 
 #foods {
-    width: 300px;
+    margin-left: 200px
+    width: 200px;
     float: left;
     margin-top: 100px;
 }
