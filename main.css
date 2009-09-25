@@ -1,15 +1,21 @@
 body {
     margin-left: 200px;
+    background: pink;
 }
 
 #main {
-    width: 600px;
+    width: 100px;
+    height: 100px;
 }
 
 #blurb {
     height: 200px;
     width: 300px;
     float: left;
+    border-width: 20px;
+    border-image: url('images/border3.png') 0 0 round;
+    -moz-border-image: url('images/border4.png') 28 repeat;
+    -webkit-border-image: url('images/border3.png') 0 0 round;
 }
 
 #picture {
