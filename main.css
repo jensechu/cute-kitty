@@ -1,20 +1,12 @@
 body {
     margin-left: 200px;
-    background: pink;
 }
 
 #main {
-    width: 100%;
+    width: 400px;
 }
 
 #blurb {
-    height: 200px;
-    width: 200px;
-    float: left;
-    border-width: 20px;
-    border-image: url('images/border3.png') 0 0 round;
-    -moz-border-image: url('images/border4.png') 28 repeat;
-    -webkit-border-image: url('images/border3.png') 0 0 round;
 }
 
 #picture {
@@ -26,9 +18,12 @@ body {
 
 #foods {
     margin-left: 200px
-    width: 200px;
-    float: left;
     margin-top: 100px;
+    float: left;
+}
+
+#catty {
+    float: right;
 }
 
 #mrow {
@@ -57,7 +52,6 @@ div {
     border: 0px solid black;
 }
 
-#foods img {
-    float: left;
-    border: 0px solid;
+.placeholder {
+    margin-left: 58px;
 }
