@@ -1,6 +1,5 @@
 body {
     margin-left: 200px;
-    background: pink;
 }
 
 #main {
@@ -9,12 +8,8 @@ body {
 
 #blurb {
     height: 200px;
-    width: 200px;
+    width: 150px;
     float: left;
-    border-width: 20px;
-    border-image: url('images/border3.png') 0 0 round;
-    -moz-border-image: url('images/border4.png') 28 repeat;
-    -webkit-border-image: url('images/border3.png') 0 0 round;
 }
 
 #picture {
@@ -25,19 +20,22 @@ body {
 }
 
 #foods {
-    margin-left: 200px
+    margin-left: 400px
     width: 200px;
     float: left;
-    margin-top: 100px;
+    margin-top: 0px;
+}
+
+p {
+    line-height: 0;
+    font-family: helvetica;
+    font-size: 25pt;
 }
 
 #mrow {
-    font-family: helvetica;
-    font-size: 25pt;
-    line-height: 0px;
     float: left;
     width: 150px;
-    margin-top: 100px;
+    margin: 0px 100px 0px 0px;
     
 }
 
@@ -53,11 +51,21 @@ h2 {
     font-size: 20pt;
     }
 
-div {
-    border: 0px solid black;
-}
-
 #foods img {
     float: left;
     border: 0px solid;
+}
+
+.block { 
+         height: 300px;
+         width: 100%;
+         position: relative;
+         float: left;
+}
+
+input { 
+        font-weight: bold;
+        background: #00A651;
+        border: 2px solid black;
+        margin: 5px;
 }
