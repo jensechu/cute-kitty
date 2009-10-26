@@ -14,7 +14,6 @@ $(document).ready(function(){
 	    $(this).attr({ src: "images/kitty_nom.png" });
 	    $(".fish").hide();
 	    $(this).addClass("eating");
-	    $("#catty").toggleClass("placeholder");
 	}
     });
 
@@ -48,7 +47,6 @@ $(document).ready(function(){
 	$('.fish').css({top: fishTop,
 			left: fishLeft});
 	$('.fish').fadeIn("slow");
-	$("#catty").toggleClass("placeholder");
     }
 
     $("form").submit(function () {
