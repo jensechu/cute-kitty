@@ -52,7 +52,7 @@ $(document).ready(function(){
 
 
     $("form").submit(function () {
-	var english = $("#rawr").val();
+	var english = $("#user-input").val();
 	var count = english.length;
 
 	$("#kitty-speech").addClass("kitty-bubble");
