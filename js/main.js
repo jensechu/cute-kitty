@@ -1,18 +1,13 @@
-function reset_meow() {
-    $("h3").html("&nbsp");
-    $("h1").html("&nbsp");
-    $("#speech").removeClass("speech-bubble");
-    $("#meow").removeClass("input-bubble");
-}
-    
-function reset_kitty() {
-    $("#picture img").attr({ src: "images/kitty.png" });
-    $('.fish').css({top: fishTop,
-		    left: fishLeft});
-    $('.fish').fadeIn("slow");
-}
-
 $(document).ready(function(){
+    
+    function reset_kitty() {
+	$("#picture img").attr({ src: "images/kitty.png" });
+	$('.fish').css({top: fishTop,
+			left: fishLeft});
+	$('.fish').fadeIn("slow");
+    }
+
+
     var fishLeft = $('.fish').css('left');
     var fishTop = $('.fish').css('top');
     var furs = ["#FFFFFF", "#F7941D", "#EBEBEB", "#636363", "#C69C6D", "#A186BE", "395A00", "#FFF220"];
@@ -34,12 +29,11 @@ $(document).ready(function(){
     $(".fish").draggable({
 	drag: function() { 
 	    $("#picture img").attr({ src: "images/kitty_hungry.png" });
-	    revert: true
+	    revert: true;
 	},
 	stop: function () {
 	    if($("#picture img").hasClass("eating")) { 
 		setTimeout(reset_kitty, 2000);
-
 	    }
 	    else {
 		reset_kitty();
@@ -49,6 +43,14 @@ $(document).ready(function(){
     });
 
 
+    function reset_meow() {
+	$("h3").text("");
+	$("h1").text("");
+	$("#speech").removeClass("speech-bubble");
+	$("#meow").removeClass("input-bubble");
+    }
+
+
     $("form").submit(function () {
 	var english = $("#rawr").val();
 	var count = english.length;
@@ -56,26 +58,26 @@ $(document).ready(function(){
 	$("#speech").addClass("speech-bubble");
 	
 	if(english == ""){
-	    $("h1").html(" mrow? ");
+	    $("h1").text(" mrow? ");
 	    $("#picture img").attr({ src: "images/kitty_confused.png" });
 	}
 
  	else {
 	    $("#meow").addClass("input-bubble");	
-	    $("h3").html(" " + english + " ");
+	    $("h3").text(" " + english + " ");
 	    $("#picture img").attr({ src: "images/kitty_meow.png" });
 	    
 
 	    if(count <= 4){
-		$("h1").html(" mew ");
+		$("h1").text(" mew ");
 	    }
 	    
 	    if(count >= 5){	
-		$("h1").html(" Meoww ");
+		$("h1").text(" Meoww ");
 	    }
 
 	    if(count == 10){	
-		$("h1").html(" rawr ");
+		$("h1").text(" rawr ");
 	    }
 
 	}
