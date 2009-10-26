@@ -54,32 +54,34 @@ $(document).ready(function(){
 	var count = english.length;
 	
 	if(english == ""){
+	    $("h1").addClass(".speech_bubble");
 	    $("h1").html(" mrow? ");
 	    $("#picture img").attr({ src: "images/kitty_confused.png" });
 	    setTimeout(reset_kitty, 1000);
-	    setTimeout(reset_meow, 1000)
+	    setTimeout(reset_meow, 1000);
 	}
+
  	else {	
 	    $("h3").html(" " + english + " ");
 	    $("#picture img").attr({ src: "images/kitty_meow.png" });
 	    setTimeout(reset_kitty, 1000);
-	}
 
-	if(count <= 3){
-	    $("h1").html(" mew ");
-	    setTimeout(reset_meow, 2000)
-	}
-	
-	if(count == 5){	
-	    $("h1").html(" Meoww ");
-	    setTimeout(reset_meow, 2000)
-	}
+	    if(count <= 3){
+		$("h1").html(" mew ");
+		setTimeout(reset_meow, 2000);
+	    }
+	    
+	    if(count == 5){	
+		$("h1").html(" Meoww ");
+		setTimeout(reset_meow, 2000);
+	    }
 
-	if(count >= 6){	
-	    $("h1").html(" rawr ");
-	    setTimeout(reset_meow, 2000)
-	}
+	    if(count >= 6){	
+		$("h1").html(" rawr ");
+		setTimeout(reset_meow, 2000);
+	    }
 	
+	}
 
 	return false;
 
