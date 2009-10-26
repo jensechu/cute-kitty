@@ -1,4 +1,7 @@
 $(document).ready(function(){
+
+    var fishLeft = $('.fish').css('left');
+    var fishTop = $('.fish').css('top');
     
     function reset_kitty() {
 	$("#picture img").attr({ src: "images/kitty.png" });
@@ -7,9 +10,6 @@ $(document).ready(function(){
 	$('.fish').fadeIn("slow");
     }
 
-
-    var fishLeft = $('.fish').css('left');
-    var fishTop = $('.fish').css('top');
     var furs = ["#FFFFFF", "#F7941D", "#EBEBEB", "#636363", "#C69C6D", "#A186BE", "395A00", "#FFF220"];
 
     $("#picture img").click(function () {
