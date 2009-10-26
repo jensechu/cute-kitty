@@ -1,4 +1,11 @@
 $(document).ready(function(){
+    var furs = ["#FFFFFF", "#F7941D", "#EBEBEB", "#636363", "#C69C6D", "#A186BE", "395A00", "#FFF220"];
+
+    $("#picture img").click(function () {
+	var choice = Math.floor(Math.random()*furs.length);
+	$(this).css({ "background-color" : furs[choice] });
+
+    });
 
     var fishLeft = $('.fish').css('left');
     var fishTop = $('.fish').css('top');
@@ -9,14 +16,6 @@ $(document).ready(function(){
 			left: fishLeft});
 	$('.fish').fadeIn("slow");
     }
-
-    var furs = ["#FFFFFF", "#F7941D", "#EBEBEB", "#636363", "#C69C6D", "#A186BE", "395A00", "#FFF220"];
-
-    $("#picture img").click(function () {
-	var choice = Math.floor(Math.random()*furs.length);
-	$(this).css({ "background-color" : furs[choice] });
-
-    });
 
     $("#picture img").droppable({
 	drop: function() { 
