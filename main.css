@@ -101,9 +101,7 @@ input {
 }
 
 .speech-bubble { 
-                 background-image: url('images/bubble.png');
-                 background-repeat: no-repeat;
-                 background-position: top right;
+                 background: url('images/bubble.png') no-repeat top right;
                  padding-right: 25px;
 
 }
