@@ -56,7 +56,6 @@ $(document).ready(function(){
 	$("#speech").addClass("speech-bubble");
 	
 	if(english == ""){
-//	    $("#speech").addClass("speech-bubble");
 	    $("h1").html(" mrow? ");
 	    $("#picture img").attr({ src: "images/kitty_confused.png" });
 	    setTimeout(reset_kitty, 1000);
