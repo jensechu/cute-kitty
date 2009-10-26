@@ -12,8 +12,8 @@ $(document).ready(function(){
     $("#picture img").droppable({
 	drop: function() { 
 	    $(this).attr({ src: "images/kitty_nom.png" });
-	    $(".fish").hide();
 	    $(this).addClass("eating");
+	    $(".fish").hide();
 	}
     });
 
@@ -52,20 +52,21 @@ $(document).ready(function(){
     $("form").submit(function () {
 	var english = $("#rawr").val();
 	var count = english.length;
+
 	$("#speech").addClass("speech-bubble");
 	
 	if(english == ""){
 	    $("h1").html(" mrow? ");
 	    $("#picture img").attr({ src: "images/kitty_confused.png" });
-	    setTimeout(reset_kitty, 1000);
-	    setTimeout(reset_meow, 1000);
+	    setTimeout(reset_kitty, 2000);
+	    setTimeout(reset_meow, 2000);
 	}
 
  	else {
 	    $("#meow").addClass("input-bubble");	
 	    $("h3").html(" " + english + " ");
 	    $("#picture img").attr({ src: "images/kitty_meow.png" });
-	    setTimeout(reset_kitty, 1000);
+	    setTimeout(reset_kitty, 2000);
 
 	    if(count <= 4){
 		$("h1").html(" mew ");
@@ -77,7 +78,7 @@ $(document).ready(function(){
 		setTimeout(reset_meow, 2000);
 	    }
 
-	    if(count >= 10){	
+	    if(count == 10){	
 		$("h1").html(" rawr ");
 		setTimeout(reset_meow, 2000);
 	    }
