@@ -1,9 +1,12 @@
 body {
        margin-left: 200px;
        }
-
+#source { 
+          float: right;
+          }
 #header { margin-bottom: 50px;
           }
+
 
 #blurb {
          width: 155px;
@@ -64,6 +67,7 @@ h3 {
 h4 { color: red;
      line-height: 0;
      font-size: 8pt;}
+
 p {
     line-height: 0;
     font-family: helvetica;
