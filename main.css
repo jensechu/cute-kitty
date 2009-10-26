@@ -15,6 +15,8 @@ body {
 
 #speech {
           width: 200px;
+          height: 200px;
+          padding-left: 10px;
           }
 
 
@@ -27,7 +29,7 @@ body {
            float: left;
            height: 200px;
            width: 200px;
-           margin-left: 100px
+           margin-left: 100px;
            }
 
 #foods {
@@ -50,7 +52,7 @@ h1 {
      font-size: 25pt;
      float: right;
      width: 100%;
-     text-align: right;
+     text-align: left;
      }
 
 h2 {
@@ -128,8 +130,7 @@ input {
           }
 
 .speech-bubble { 
-                 background: url('images/bubble.png') no-repeat top right;
-                 padding-right: 25px;
+                 background: url('images/bubble.png') no-repeat top left;
 
                  }
 
