@@ -47,6 +47,7 @@ $(document).ready(function(){
 	$("h1").text("");
 	$("#kitty-speech").removeClass("kitty-bubble");
 	$("#user-speech").removeClass("input-bubble");
+	$("#user-input").val("");
     }
 
 
