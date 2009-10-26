@@ -8,19 +8,19 @@ body {
           }
 
 
-#blurb {
+#chat {
          width: 155px;
          float: left;
          }
 
-#speech {
+#kitty-speech {
           width: 200px;
           height: 200px;
           padding-left: 10px;
           }
 
 
-#meow { 
+#user-speech { 
         height: 100px;
         width: 200px;
         }
@@ -32,14 +32,14 @@ body {
            margin-left: 100px;
            }
 
-#foods {
+#food {
          margin-left: 400px
          width: 200px;
          float: left;
          margin-top: 0px; 
          }
 
-#mrow {
+#talk {
         float: left;
         width: 150px;
         margin: 0px 100px 0px 0px;
@@ -118,18 +118,18 @@ input {
           margin-left: 100px;
           }
 
-#hmrow { 
+#htalk { 
          float: left;
          width: 150px;
          margin-right: 100px;
          }
 
-#hfoods { 
+#hfood { 
           float: left;
           width: 150px;
           }
 
-.speech-bubble { 
+.kitty-bubble { 
                  background: url('images/bubble.png') no-repeat top left;
 
                  }

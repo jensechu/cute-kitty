@@ -45,8 +45,8 @@ $(document).ready(function(){
     function reset_meow() {
 	$("h3").text("");
 	$("h1").text("");
-	$("#speech").removeClass("speech-bubble");
-	$("#meow").removeClass("input-bubble");
+	$("#kitty-speech").removeClass("kitty-bubble");
+	$("#user-speech").removeClass("input-bubble");
     }
 
 
@@ -54,7 +54,7 @@ $(document).ready(function(){
 	var english = $("#rawr").val();
 	var count = english.length;
 
-	$("#speech").addClass("speech-bubble");
+	$("#kitty-speech").addClass("kitty-bubble");
 	
 	if(english == ""){
 	    $("h1").text(" mrow? ");
@@ -62,7 +62,7 @@ $(document).ready(function(){
 	}
 
  	else {
-	    $("#meow").addClass("input-bubble");	
+	    $("#user-speech").addClass("input-bubble");	
 	    $("h3").text(" " + english + " ");
 	    $("#picture img").attr({ src: "images/kitty_meow.png" });
 	    
