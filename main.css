@@ -3,9 +3,14 @@ body {
 }
 
 #blurb {
-    height: 200px;
-    width: 150px;
+    height: 500px;
+    width: 155px;
     float: left;
+}
+
+#speech { 
+    height: 200px;
+    width: 200px;
 }
 
 #picture {
@@ -97,5 +102,8 @@ input {
 
 .speech-bubble { 
                  background-image: url('images/bubble.png');
+                 background-repeat: no-repeat;
+                 background-position: top right;
+                 padding-right: 25px;
 
 }

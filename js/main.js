@@ -39,6 +39,7 @@ $(document).ready(function(){
     function reset_meow() {
 	$("h3").html("&nbsp");
 	$("h1").html("&nbsp");
+	$("#speech").removeClass("speech-bubble");
     }
      
     function reset_kitty() {
@@ -52,9 +53,10 @@ $(document).ready(function(){
     $("form").submit(function () {
 	var english = $("#rawr").val();
 	var count = english.length;
+	$("#speech").addClass("speech-bubble");
 	
 	if(english == ""){
-	    $("h1").addClass(".speech_bubble");
+//	    $("#speech").addClass("speech-bubble");
 	    $("h1").html(" mrow? ");
 	    $("#picture img").attr({ src: "images/kitty_confused.png" });
 	    setTimeout(reset_kitty, 1000);
@@ -66,17 +68,17 @@ $(document).ready(function(){
 	    $("#picture img").attr({ src: "images/kitty_meow.png" });
 	    setTimeout(reset_kitty, 1000);
 
-	    if(count <= 3){
+	    if(count <= 4){
 		$("h1").html(" mew ");
 		setTimeout(reset_meow, 2000);
 	    }
 	    
-	    if(count == 5){	
+	    if(count >= 5){	
 		$("h1").html(" Meoww ");
 		setTimeout(reset_meow, 2000);
 	    }
 
-	    if(count >= 6){	
+	    if(count >= 10){	
 		$("h1").html(" rawr ");
 		setTimeout(reset_meow, 2000);
 	    }
