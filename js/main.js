@@ -40,6 +40,7 @@ $(document).ready(function(){
 	$("h3").html("&nbsp");
 	$("h1").html("&nbsp");
 	$("#speech").removeClass("speech-bubble");
+	$("#meow").removeClass("input-bubble");
     }
      
     function reset_kitty() {
@@ -62,7 +63,8 @@ $(document).ready(function(){
 	    setTimeout(reset_meow, 1000);
 	}
 
- 	else {	
+ 	else {
+	    $("#meow").addClass("input-bubble");	
 	    $("h3").html(" " + english + " ");
 	    $("#picture img").attr({ src: "images/kitty_meow.png" });
 	    setTimeout(reset_kitty, 1000);
